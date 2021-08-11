@@ -15,3 +15,6 @@ resource "aws_instance" "test" {
 output "publicip" {
   value = aws_instance.test.public_ip
 }
+output "privateip" {
+  value = aws_instance.test.private_ip
+}
