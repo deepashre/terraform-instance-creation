@@ -1,4 +1,4 @@
-package in.javahome.myweb.controller;
+package in.rl.myweb.controller;
 
 import junit.framework.Assert;
 import junit.framework.TestCase;
