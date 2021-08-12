@@ -1,5 +1,8 @@
 - hosts: all
   become: yes
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: "{{ ansible_playbook_python }}"
   tasks:
     - name: copy war file to the remote server
       copy:
