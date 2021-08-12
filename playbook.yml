@@ -1,12 +1,13 @@
 - hosts: all
   become: yes
+  sudo: yes
   gather_facts: false
   vars:
     ansible_python_interpreter: "{{ ansible_playbook_python }}"
   tasks:
     - name: copy war file to the remote server
       copy:
-        src= /var/lib/jenkins/workspace/app-demo/target/simple-app*.war
-        remote_src=no
-        dest= /tomcat/webapps/simple-app.war
+        src: /target/simple-app*.war
+        remote_src: no
+        dest: /tomcat/webapps/simple-app.war
     
