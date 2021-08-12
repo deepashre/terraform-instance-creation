@@ -8,6 +8,5 @@
     - name: copy war file to the remote server
       copy:
         src: /target/simple-app*.war
-        remote_src: no
         dest: /tomcat/webapps/simple-app.war
     
