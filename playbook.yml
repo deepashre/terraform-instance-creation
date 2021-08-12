@@ -7,6 +7,6 @@
   tasks:
     - name: copy war file to the remote server
       copy:
-        src: simple-app*.war
+        src: /var/lib/jenkins/workspace/simple-app/target/simple-app-3.0.0-SNAPSHOT
         dest: /tomcat/webapps/simple-app.war
     
