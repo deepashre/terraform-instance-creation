@@ -1,16 +1,16 @@
 provider "aws" {
   region = var.aws_region
 }
-resource "aws_instance" "webapp" { 
-    ami = "ami-04cedf5afbdca0e15"
+resource "aws_instance" "wp" { 
+    ami = "ami-0e8e1023f4a053cda"
     instance_type = "t2.micro"
     key_name = "cloud-poc"
     
     tags = {
-    Name = "web-app"
+    Name = "wp-demo"
     }
 
 }
 output "publicip" {
-  value = aws_instance.webapp.public_ip
+  value = aws_instance.wp.public_ip
 }
