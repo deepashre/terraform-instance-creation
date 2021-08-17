@@ -2,12 +2,13 @@ provider "aws" {
   region = var.aws_region
 }
 resource "aws_instance" "app" { 
-    ami = "ami-0adef6268736a8a10"
+    ami = "ami-093da3ec1c40a85d6"
     instance_type = "t2.micro"
     key_name = "cloud-poc"
+    associate_public_ip_address = "true"
     
     tags = {
-    Name = "Deploy-Apache"
+    Name = "Deploy-Tomcat9"
     }
 
 }
