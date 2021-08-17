@@ -2,7 +2,7 @@ provider "aws" {
   region = var.aws_region
 }
 resource "aws_instance" "app" { 
-    ami = "ami-0e8e1023f4a053cda"
+    ami = "ami-0adef6268736a8a10"
     instance_type = "t2.micro"
     key_name = "cloud-poc"
     
